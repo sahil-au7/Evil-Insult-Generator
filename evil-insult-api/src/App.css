@@ -5,23 +5,50 @@
   padding: 0;
 }
 
-html,
-body {
-  background: #000 url('https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png') no-repeat center center/cover;
-  height: 100vh;
-  color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
 .app {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+    background: #000 url('https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png') no-repeat center center/cover;
+
 }
 
-.insult {
+.app__body {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: -40px;
+  height: 37vh;
+  width: 70vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+}
+
+
+.insult__container {
+  background-image: url("./img/imgbg.jpg");
+  flex:1;
+  height: 35vh;
+  width: 70vw;
+  display: grid;
+  place-items: center;
+}
+
+
+.insult__container>button {
+  margin-top: 30px;
+  text-transform: inherit !important;
+  background-color: black;
+  color:white;
+  size:large;
+  outline-style: hidden;
+}
+
+.insult_container>button:hover {
+  color: #0a8d48;
+}
+
+.insult__text{
+  color:white;
+  text-align: center;
+  font-family: 'Big Shoulders Stencil Text',
+  cursive;
+  padding: 20PX;
 }
