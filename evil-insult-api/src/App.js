@@ -1,33 +1,40 @@
-import './App.css';
-import React,{useEffect,useState} from "react";
+import "./App.css";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Insult from './components/insult';
-import Header from "./components/header"
+import Insult from "./components/Insult";
+import Header from "./components/Header";
 function App() {
-
   const [result, setResult] = useState("");
   const [isLoading, setIsLoading] = useState(true);
-  const [generate,setGenerate] = useState(1)
+  const [generate, setGenerate] = useState(true);
 
-   useEffect(() => {
-  const fetchItems = async () => {
+  useEffect(() => {
+    const fetchItems = async () => {
       const headers = {
-      "Content-Type": "application/json",
+        "Content-Type": "application/json",
       };
-    const response = await axios(`https://cors-anywhere.herokuapp.com/https://evilinsult.com/generate_insult.php?lang=en&type=json`, { headers });
-    
-    setResult(response.data);
-    setGenerate("")
-    setIsLoading(false);
-    }
-      fetchItems();
-  },[generate])
+      await axios(
+        `https://cors-anywhere.herokuapp.com/https://evilinsult.com/generate_insult.php?lang=en&type=json`,
+        { headers }
+      ).then((response) => {
+        setResult(response.data);
+        setIsLoading(false);
+      });
+      // console.log(generate);
+    };
+    fetchItems();
+  }, [generate]);
 
   return (
     <div className="app">
-        <Header />
+      <Header />
       <div className="app__body">
-        <Insult insult={result.insult} setGenerate={q=>setGenerate(q)} isLoading={isLoading}/>
+        <Insult
+          insult={result.insult}
+          generate={generate}
+          setGenerate={(q) => setGenerate(q)}
+          isLoading={isLoading}
+        />
       </div>
     </div>
   );

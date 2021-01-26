@@ -1,8 +1,8 @@
-import React from 'react'
-import Spinner from "./spinner";
+import React from "react";
+import Spinner from "./Spinner";
 
-const insultText = ({isLoading,insult}) => {
-    return isLoading ? (<Spinner />) : (<h1>{insult}</h1>)
-}
+const insultText = ({ isLoading, insult }) => {
+  return isLoading ? <Spinner /> : <h1>{insult}</h1>;
+};
 
-export default insultText
+export default insultText;

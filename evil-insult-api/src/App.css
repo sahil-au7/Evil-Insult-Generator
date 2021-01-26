@@ -1,68 +1,50 @@
-
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 .app {
-  display: grid;
-  place-items: center;
   height: 100vh;
-    background: #000 url('https://coolbackgrounds.io/images/backgrounds/index/sea-edge-79ab30e2.png') no-repeat center center/cover;
-
+  width: 100vw;
 }
 
 .app__body {
-  display: flex;
-  margin-top: -200px;
-  height: 37vh;
-  width: 70vw;
+  margin: 100px;
+  align-items: center;
   box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
 }
 
-
 .insult__container {
-  background: url("./img/imgbg.jpg") no-repeat center/cover ;
-  flex:1;
-  height: 35vh;
-  width: 70vw;
+  background: url("./img/imgbg.jpg") no-repeat center/cover;
   display: grid;
   place-items: center;
 }
 
-
-.header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
-}
-
-
-.insult__container>button {
+.insult__container > button {
   margin-top: 30px;
-  text-transform: inherit !important;
   background-color: black;
-  color:white;
-  size:large;
+  color: white;
+  size: large;
+  margin-bottom: 30px;
 }
 
-.insult_container>button:hover {
-  color: #0a8d48;
-}
-
-.insult__text{
+.insult__text {
+  margin: 40px;
   text-align: center;
-  font-family: 'Big Shoulders Stencil Text', cursive;
+  font-family: "Big Shoulders Stencil Text", cursive;
   font-size: x-large;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
-   color: white;
-   font-weight: bold;
-   border: 3px solid #f1f1f1;
-   z-index: 2;
-   width: 80%;
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  z-index: 2;
+  width: 80%;
+}
+
+@media (max-width: 850px) {
+  .app__body {
+    margin: 50px;
+  }
 }
