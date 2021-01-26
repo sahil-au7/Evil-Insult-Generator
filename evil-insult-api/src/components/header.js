@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header__info">
-        <BrokenImageIcon className="header__logo" />
+        <img src="http://clipart-library.com/images/6ip5BBKpT.png" alt="" />
         <h1>Insult GENERATOR</h1>
       </div>
       <div className="header__links">

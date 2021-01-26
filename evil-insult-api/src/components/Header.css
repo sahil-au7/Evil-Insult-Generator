@@ -19,6 +19,10 @@
   align-items: center;
 }
 
+.header__info > img {
+  height: 120px;
+}
+
 .header__logo {
   font-size: 60px !important;
   margin-right: 7px;
